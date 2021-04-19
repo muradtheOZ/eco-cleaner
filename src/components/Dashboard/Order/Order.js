@@ -23,16 +23,9 @@ const Order = () => {
     };
 
     const handlePaymentSuccess = paymentId => {
-        // console.log(infoData)
-        // const orderDetails = {
-        //     service: infoData.service,
-        //     description: infoData.description,
-        //     paymentId,
-        //     orderTime: new Date()
-        // };
-        // infoData.created = new Date();
+        infoData.created = new Date();
 
-        fetch('http://localhost:4000/addOrder', {
+        fetch('https://tranquil-thicket-03462.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(infoData)
@@ -52,6 +45,7 @@ const Order = () => {
                 <div className="col-md-10">
                     <Topbar></Topbar>
                     <div style={{ width: '100%' }} className="col-md-6 mt-5">
+                        <h5>Make a Order</h5>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <input type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Your name / company’s name" className="form-control" />

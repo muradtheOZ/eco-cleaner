@@ -8,6 +8,6 @@
     background: url(../../../resources/images/mainpic.png);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: -50;
 }

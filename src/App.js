@@ -15,6 +15,7 @@ import Review from './components/Dashboard/Review/Review';
 import ServiceDetails from './components/Dashboard/ServiceDetails/ServiceDetails';
 import AddService from './components/Dashboard/AddService/AddService';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
+import DeleteService from './components/Dashboard/DeleteService/DeleteService';
 
 export const UserContext = createContext();
 
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path="/addservice">
           <AddService></AddService>
+        </Route>
+        <Route path="/deleteService/:id">
+          <DeleteService></DeleteService>
         </Route>
         <Route path="/makeadmin">
           <MakeAdmin></MakeAdmin>

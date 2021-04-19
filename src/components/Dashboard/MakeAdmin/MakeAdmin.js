@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const onSubmit = data => {
-        fetch('http://localhost:4000/makeAdmin',{
+        fetch('https://tranquil-thicket-03462.herokuapp.com/makeAdmin',{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -29,6 +29,7 @@ const MakeAdmin = () => {
             <div className="col-md-10">
                 <Topbar></Topbar>
                 <div style={{width: '100%', background: '#F5F6FA', borderRadius: '10px', padding: '30px 50px'}} className="col-md-6 mt-5">
+                    <h5>Make Admin</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <input type="email" ref={register({ required: true })} name="email" placeholder="Email" className="form-control" />
@@ -38,7 +39,7 @@ const MakeAdmin = () => {
                             <button type="submit" className="btn main-btn" style={{textTransform: 'uppercase'}}>Submit</button>
                         </div>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
     );

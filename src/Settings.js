@@ -1,1 +1,1 @@
-export const serverURL="http://localhost:4000"
+export const serverURL="https://tranquil-thicket-03462.herokuapp.com"

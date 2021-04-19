@@ -1,9 +1,19 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import logo from '../../../resources/images/logo.png'
+import { handleSignOut } from '../Login/LoginManager';
 
 const Navbar = () => {
+    const history =  useHistory()
     const { name } = useParams();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const handleLogOut = () => {
+        sessionStorage.clear()
+        setLoggedInUser(null);
+        handleSignOut()
+        history.push('/home')
+    }
     return (
         <div className="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -18,17 +28,27 @@ const Navbar = () => {
                             <a class="nav-link mr-4" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-4" href="#">About Us</a>
+                            <a class="nav-link mr-4" href="#">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-4" href="#">Budget Calculator</a>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link mr-4" to="/order/:`${name}`">Dashboard</Link>
                         </li>
-                        <li>
-                            <Link to="/order/:`${name}`" ><button className="btn main-btn">Login</button></Link>
-                        </li>
-                        <li>
-                            <button className="btn main-btn ml-1" onClick={() => { sessionStorage.clear() }}>LogOut</button>
-                        </li>
+                        {
+                        loggedInUser.name?
+                            <li>
+                              <button onClick={handleLogOut} className="btn main-btn">log Out</button>
+                            </li>
+                            :
+                            <li>
+                                <Link to="/login" ><button className="btn main-btn">log In</button></Link>
+                            </li>
+                        }
+                        
+
                     </ul>
                 </div>
             </nav>
