@@ -2,9 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-btn{
+  background-color: black;
+  border: none;
+  padding: 8px 25px;
+  color: white;
+}
+
+.main-btn:hover{
+  background-color: #7AB259;
+  border: none;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

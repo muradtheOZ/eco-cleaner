@@ -1,0 +1,13 @@
+.header-container::after {
+    height: 520px;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    background: url(../../../resources/images/mainpic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -50;
+}
