@@ -10,9 +10,9 @@ const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const handleLogOut = () => {
         sessionStorage.clear()
-        setLoggedInUser(null);
+        setLoggedInUser({});
         handleSignOut()
-        history.push('/home')
+        history.push('/')
     }
     return (
         <div className="container">
