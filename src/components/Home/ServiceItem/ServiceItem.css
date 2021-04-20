@@ -4,4 +4,25 @@
     border-radius: 10px;
     box-shadow: 5px 5px 20px gray;
     cursor: pointer;
+    height: 400px;
+    overflow: scroll;
 }
+
+.service-item:hover {
+    transform: scale(1.08); 
+    transition: transform 0.5s, filter 0.2s ease-in-out;
+  }
+.service-item img{
+    height: 200px;
+    object-fit:cover;
+}
+
+.service-item::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .service-item {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

@@ -9,7 +9,7 @@ const ServiceItem = ({service}) => {
     }
     
     return (
-        <div className="col-md-4 col-sm-12">
+        <div className=" col-md-4 col-sm-12">
             <div className="service-item my-4" onClick={handleBuyService}>
                 {
                     service.image ? <img style={{width: '100%'}} src={`data:image/png;base64,${service.image.img}`}/>
