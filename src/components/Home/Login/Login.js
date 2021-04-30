@@ -9,7 +9,8 @@ import logo from '../../../resources/images/logo.png'
 import google from '../../../resources/images/google.png'
 
 const Login = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };

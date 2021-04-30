@@ -7,7 +7,8 @@ import Topbar from '../Topbar/Topbar';
 
 const MakeAdmin = () => {
     const { register, handleSubmit, errors } = useForm();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
 
     const onSubmit = data => {
         fetch('https://tranquil-thicket-03462.herokuapp.com/makeAdmin',{

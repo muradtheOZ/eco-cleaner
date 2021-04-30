@@ -5,9 +5,10 @@ import './ServiceDetails.css'
 import { UserContext } from '../../../App';
 
 const ServiceDetails = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1,value2} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
 
-    const [details, setDetails] = useState([])
+    const [details, setDetails] = value2;
     console.log(details)
     useEffect(() => {
         fetch('https://tranquil-thicket-03462.herokuapp.com/ordersSpecific', {

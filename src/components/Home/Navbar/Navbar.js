@@ -7,7 +7,8 @@ import { handleSignOut } from '../Login/LoginManager';
 const Navbar = () => {
     const history =  useHistory()
     const { name } = useParams();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
     const handleLogOut = () => {
         sessionStorage.clear()
         setLoggedInUser({});

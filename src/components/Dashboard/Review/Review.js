@@ -9,7 +9,8 @@ const Review = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
     const { register, handleSubmit, errors } = useForm();
 
     const handleBlur = e => {

@@ -14,7 +14,8 @@ const containerStyle = {
 
 const Order = () => {
     const { name } = useParams();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
 
     const { register, handleSubmit, errors } = useForm();
     const [infoData, setinfoData] = useState(null)

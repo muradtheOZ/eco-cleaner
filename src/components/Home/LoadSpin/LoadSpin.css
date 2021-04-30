@@ -1,0 +1,15 @@
+html, body{
+    height: 100%;
+  }
+  
+  .custom-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .center-me{
+    width: 100%;
+    height: 100%;
+  }

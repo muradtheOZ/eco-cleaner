@@ -10,7 +10,8 @@ import { serverURL } from '../../../Settings';
 
 const Sidebar = () => {
     const { name } = useParams();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { value,value1} = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = value;
     const [adminTemplate, setAdminTemplate] = useState('');
     const [admin, setAdmin] = useState(false);
     let [admins, setadmins] = useState([])
