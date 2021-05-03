@@ -23,9 +23,10 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   const[loader,setLoader] = useState(true)
   const [services, setServices] =  useState([])
+  const[order,setOrder] =useState({});
 
   return (
-    <UserContext.Provider value={{ value:[loggedInUser,setLoggedInUser],value1:[loader,setLoader], value2:[services, setServices]}}>
+    <UserContext.Provider value={{ value:[loggedInUser,setLoggedInUser],value1:[loader,setLoader], value2:[services, setServices],value3:[order,setOrder]}}>
     <Router>
       <Switch>
         <Route path="/home">

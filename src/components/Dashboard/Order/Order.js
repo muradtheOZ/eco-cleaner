@@ -13,9 +13,12 @@ const containerStyle = {
 }
 
 const Order = () => {
-    const { name } = useParams();
-    const { value,value1} = useContext(UserContext);
+    const { name} = useParams();
+    const { value,value1,value2,value3} = useContext(UserContext);
   const [loggedInUser, setLoggedInUser] = value;
+  const [services, setServices] = value2;
+  const[order,setOrder] = value3;
+  console.log("what you ordered",order);
 
     const { register, handleSubmit, errors } = useForm();
     const [infoData, setinfoData] = useState(null)
@@ -49,23 +52,22 @@ const Order = () => {
                         <h5>Make a Order</h5>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Your name / company’s name" className="form-control" />
+                                <input type="text" ref={register({ required: true })} name="name" value={loggedInUser.name} placeholder="Your name / company’s name" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="email" placeholder="Your email address" defaultValue={loggedInUser.email} className="form-control" />
+                                <input type="text" ref={register({ required: true })} name="email" placeholder="Your email address" value={loggedInUser.email} className="form-control" />
                                 {errors.email && <span className="text-danger">This field is required</span>}
                             </div>
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="service" defaultValue={name} placeholder="Service Name" className="form-control" />
+                                <input type="text" ref={register({ required: true })} name="service" value={name} placeholder="Service Name" className="form-control" />
                                 {errors.service && <span className="text-danger">This field is required</span>}
                             </div>
                             <div className="form-group">
-                                <textarea type="text" ref={register({ required: false })} placeholder="Project Details" className="form-control" name="description" id="" cols="30" rows="10"></textarea>
+                                <textarea type="text" ref={register({ required: false })} placeholder="Your Home Address and Phone No" className="form-control" name="description" id="" cols="30" rows="10"></textarea>
                             </div>
                             <div className="form-group d-flex justify-content-between align-items-center">
-                                <input ref={register({ required: false })} type="number" min="0.00" max="10000.00" style={{ width: '48%' }} className="form-control" name="price" placeholder="Price" id="" />
-                                <input ref={register({ required: false })} type="file" style={{ width: '48%' }} className="form-control" name="file" placeholder="Upload project File" id="" />
+                                <input ref={register({ required: true })}  style={{ width: '48%' }} className="form-control" name="price" value={order.price}id="" />
                             </div>
 
                             <div className="form-group text-left">

@@ -41,7 +41,7 @@ const ServiceDetails = () => {
                                 <th className="text-secondary" scope="col">Name</th>
                                 <th className="text-secondary" scope="col">Email ID</th>
                                 <th className="text-secondary" scope="col">Service</th>
-                                <th className="text-secondary w-25" scope="col">Orders Details</th>
+                                <th className="text-secondary w-25" scope="col">Customer Info</th>
                                 <th className="text-secondary" scope="col">Payment via</th>
                                 <th className="text-secondary" scope="col">Status</th>
                             </tr>

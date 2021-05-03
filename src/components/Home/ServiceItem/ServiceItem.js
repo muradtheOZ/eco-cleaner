@@ -9,11 +9,16 @@ const ServiceItem = ({ service }) => {
     const history = useHistory();
     const handleBuyService = () => {
         history.push(`/order/${service.title}`)
+        setOrder({
+            name:service.title,
+            price:service.price,
+        })
     }
 
-    const { value, value1, value2 } = useContext(UserContext);
+    const { value, value1, value2,value3 } = useContext(UserContext);
     const [loader, setLoader] = value1;
     const [services, setServices] = value2;
+    const[order,setOrder] = value3
     services ?
         setLoader(false)
         :

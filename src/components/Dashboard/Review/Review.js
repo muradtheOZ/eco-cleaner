@@ -45,6 +45,7 @@ const Review = () => {
                 console.error(error)
             })
     }
+    console.log("logged in user info", loggedInUser);
 
     return (
         <div className="row container-fluid">
@@ -57,11 +58,11 @@ const Review = () => {
                         <h5 className="text-brand">Leave a Review</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
-                            <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Your name" className="form-control" />
+                            <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="name" value={loggedInUser.name} placeholder="Your name" className="form-control" />
                             {errors.name && <span className="text-danger">This field is required</span>}
                         </div>
                         <div className="form-group">
-                            <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="designation" placeholder="Company Name/Designation" className="form-control" />
+                            <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="Service Name" placeholder="Please Enter the service name" className="form-control" />
                             {errors.designation && <span className="text-danger">This field is required</span>}
                         </div>
                         <div className="form-group">
