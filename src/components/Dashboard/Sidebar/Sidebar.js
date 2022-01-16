@@ -25,7 +25,7 @@ const Sidebar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/deleteService/:`${name}`" className="text-dark">
+                <Link to="/deleteService" className="text-dark">
                     <FontAwesomeIcon icon={faMinus} /> <span>Delete Service</span>
                 </Link>
             </li>
@@ -35,7 +35,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/service" className="text-dark">
+                    <Link to="/manage_service" className="text-dark">
                         <FontAwesomeIcon icon={faList} /> <span>Manage Orders</span>
                     </Link>
                 </li></>)

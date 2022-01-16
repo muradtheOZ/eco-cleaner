@@ -10,12 +10,16 @@ import { createContext } from 'react';
 import Order from './components/Dashboard/Order/Order';
 import PrivateRoute from './components/Home/Login/PrivateRoute/PrivateRoute';
 import Login from './components/Home/Login/Login';
-import Service from './components/Dashboard/Service/Service';
 import Review from './components/Dashboard/Review/Review';
 import ServiceDetails from './components/Dashboard/ServiceDetails/ServiceDetails';
 import AddService from './components/Dashboard/AddService/AddService';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 import DeleteService from './components/Dashboard/DeleteService/DeleteService';
+import Service from './components/Home/Service/Service';
+import Header from './components/Home/Header/Header';
+import Navbar from './components/Home/Navbar/Navbar';
+import ServiceOrdered from './components/Dashboard/OrderedService/ServiceOrdered'
+
 
 export const UserContext = createContext();
 
@@ -29,14 +33,18 @@ function App() {
     <UserContext.Provider value={{ value:[loggedInUser,setLoggedInUser],value1:[loader,setLoader], value2:[services, setServices],value3:[order,setOrder]}}>
     <Router>
       <Switch>
+      <Route exact path="/">
+          <Home></Home>
+        </Route>
         <Route path="/home">
           <Home></Home>
         </Route>
         <Route path="/login">
           <Login></Login>
         </Route>
-        <Route path="/service">
-          <Service></Service>
+        <Route path="/services">
+          <Navbar></Navbar>
+          <Service/>
         </Route>
         <Route path="/servicedetails">
           <ServiceDetails></ServiceDetails>
@@ -44,7 +52,10 @@ function App() {
         <Route path="/addservice">
           <AddService></AddService>
         </Route>
-        <Route path="/deleteService/:id">
+        <Route path ="/manage_service">
+        <ServiceOrdered></ServiceOrdered>
+        </Route>
+        <Route path="/deleteService">
           <DeleteService></DeleteService>
         </Route>
         <Route path="/makeadmin">
@@ -59,9 +70,7 @@ function App() {
         <PrivateRoute path="/order/:name">
           <Order></Order>
         </PrivateRoute>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
+        
       </Switch>
     </Router>
     </UserContext.Provider>

@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div className="contact-bg">
             <div className="container contact-content">
-            <div className="row mb-5">
+            <div className="row pb-4">
                 <div className="col-md-4 offset-md-1">
                     <h3>Let us handle your project, professionally.</h3>
                     <p>With well written codes, we build amazing apps for all platforms, mobile and web apps in general.</p>
@@ -18,9 +18,6 @@ const Contact = () => {
                         <button className="btn btn-primary main-btn">Send</button>
                     </form>
                 </div>
-            </div>
-            <div className="footer text-center">
-            <small>Copyright {(new Date()).getFullYear()} All Rights Reserved</small>
             </div>
             </div>
         </div>

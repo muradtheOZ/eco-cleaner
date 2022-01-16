@@ -26,10 +26,10 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link mr-4" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link mr-4" href="/home">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mr-4" href="#">Services</a>
+                            <a class="nav-link mr-4" href="/services">Services</a>
                         </li>
 
                         <li class="nav-item">

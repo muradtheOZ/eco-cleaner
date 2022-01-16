@@ -6,10 +6,26 @@ import { UserContext } from '../../../App';
 import LoadSpin from '../LoadSpin/LoadSpin';
 
 const Service = () => {
-    const { value, value1, value2 } = useContext(UserContext);
-    const [services, setServices] = value2;
+    const[loading,setLoad] = useState(true)
+    const [services, setServices] = useState([]);
+    useEffect( () => {
+        fetch('https://tranquil-thicket-03462.herokuapp.com/services')
+        .then(res => res.json())
+        .then(data =>(
+            setServices(data),
+            console.log("What Data I am getting: ",data),
+            setLoad(false)
+        ) 
+            
+    )}, [services])
+    console.log("What service I am getting: ",services)
     return (
-        <section className="container text-center my-5">
+        <div>
+        {
+            loading?
+            <LoadSpin/>
+            :
+            <section className="container text-center my-5">
             <h2>Provide awesome <span><Link to="/order/:`${name}`" style={{ color: '#7AB259' }}>services</Link></span></h2>
             
                     <div className="row mt-5">
@@ -20,6 +36,9 @@ const Service = () => {
             
 
         </section>
+        }
+        </div>
+        
     );
 };
 

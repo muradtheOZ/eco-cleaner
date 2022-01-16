@@ -20,6 +20,7 @@ const DeleteService = () => {
 
     return (
         <div>
+            <p>You have reached the deletion page successfully</p>
             {
                 services.map(item => <DeleteItem key={item._id} item={item}></DeleteItem>)
             }

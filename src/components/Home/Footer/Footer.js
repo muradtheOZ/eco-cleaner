@@ -4,7 +4,7 @@ import Icon from '../icons/'
 
 export function FooterContainer() {
     return (
-        <Footer>
+        <Footer className="pt-4 mt-2">
             <Footer.Wrapper>
             <Footer.Row>
                 <Footer.Column>
@@ -36,6 +36,9 @@ export function FooterContainer() {
                 </Footer.Column>
             </Footer.Row>
             </Footer.Wrapper>
+            <div className="footer text-center">
+            <small>Copyright {(new Date()).getFullYear()} All Rights Reserved</small>
+            </div>
         </Footer>
     )
 }
