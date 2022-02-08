@@ -6,10 +6,10 @@ import './LoadSpin.css'
 
 export default function LoadSpin() {
   return (
-    <div className="custom-container">
-    <div className="center-me">
+    <div>
       <CircularProgress color="secondary" />
-    </div>
+    <h4>It's taking some time to collect the data.</h4>
+    <h6>Please wait.... <span role="img" > 😥 </span></h6>
     </div>
   );
 }

@@ -6,38 +6,28 @@ import { UserContext } from '../../../App';
 import LoadSpin from '../LoadSpin/LoadSpin';
 
 const Service = () => {
-    const[loading,setLoad] = useState(true)
-    const [services, setServices] = useState([]);
-    useEffect( () => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/services')
-        .then(res => res.json())
-        .then(data =>(
-            setServices(data),
-            console.log("What Data I am getting: ",data),
-            setLoad(false)
-        ) 
-            
-    )}, [services])
-    console.log("What service I am getting: ",services)
+    const{value1,value2} = useContext(UserContext);
+    const [services, setServices] = value2;
+    const [loader, setLoader] = value1;
     return (
-        <div>
+        <>
         {
-            loading?
+            loader?
             <LoadSpin/>
             :
             <section className="container text-center my-5">
-            <h2>Provide awesome <span><Link to="/order/:`${name}`" style={{ color: '#7AB259' }}>services</Link></span></h2>
+            <h2>Provide awesome <span style={{ color: '#7AB259' }}>  services</span></h2>
             
                     <div className="row mt-5">
                         {
-                            services.map(service => <ServiceItem service={service}></ServiceItem>)
+                            services.map(service => <ServiceItem key={service._id} service={service}></ServiceItem>)
                         }
                     </div>
             
 
         </section>
         }
-        </div>
+        </>
         
     );
 };

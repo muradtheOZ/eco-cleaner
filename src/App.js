@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -28,6 +28,29 @@ function App() {
   const[loader,setLoader] = useState(true)
   const [services, setServices] =  useState([])
   const[order,setOrder] =useState({});
+
+    useEffect( () => {
+        fetch('https://tranquil-thicket-03462.herokuapp.com/services')
+        .then(res => res.json())
+        .then(data =>(
+            setServices(data),
+            console.log("What Data I am getting: ",data),
+            setLoader(false)
+        ) 
+            
+    )}, [])
+
+    // useEffect( () => {
+    //   fetch('https://tranquil-thicket-03462.herokuapp.com/reviews')
+    //   .then(res => res.json())
+    //   .then(data =>(
+    //       setLoader(false),
+    //       setReviews(data)
+    //   ) 
+          
+          
+    //   )}, [])
+    console.log("What service I am getting: ",services)
 
   return (
     <UserContext.Provider value={{ value:[loggedInUser,setLoggedInUser],value1:[loader,setLoader], value2:[services, setServices],value3:[order,setOrder]}}>

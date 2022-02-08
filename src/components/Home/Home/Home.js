@@ -24,7 +24,7 @@ const Home = () => {
             <Header></Header>
             {
                 loader?
-                <div className="custom-spinner pt-4 mt-4 mx-auto">
+                <div className="custom-spinner pt-4 mt-4">
                 <LoadSpin />
             </div>
                 
