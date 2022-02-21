@@ -3,7 +3,8 @@ import './Contact.css'
 
 const Contact = () => {
     return (
-        <div className="contact-bg">
+        <div className="contact-bg mt-5 pt-4">
+            <h2 className="text-center">Want to talk in <span style={{ color: '#7AB259' }}>more details?</span></h2>
             <div className="container contact-content">
             <div className="row pb-4">
                 <div className="col-md-4 offset-md-1">

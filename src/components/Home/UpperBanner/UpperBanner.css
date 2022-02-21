@@ -1,0 +1,12 @@
+.UpperBanner-bg{
+    background-color: #7AB259;
+}
+.svg-fixed-hight{
+    width: 100%;
+    height: 40px;
+    object-fit:contain;
+
+}
+.upper-banner{
+    color: #FFFFFF;
+}
