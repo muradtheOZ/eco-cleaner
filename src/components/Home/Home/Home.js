@@ -20,7 +20,6 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-      <UpperBanner></UpperBanner>
       {loader ? (
         <div className="custom-spinner pt-4 mt-4">
           <LoadSpin />
@@ -29,8 +28,17 @@ const Home = () => {
         <div>
           {" "}
           <Service></Service>
-          <Review></Review>
         </div>
+      )}
+      <UpperBanner></UpperBanner>
+      {loader?(
+          <div className="custom-spinner pt-4 mt-4">
+          <LoadSpin />
+        </div>
+      ):(
+          <div>
+            <Review></Review>
+          </div>
       )}
       <Contact></Contact>
       <FooterContainer />
