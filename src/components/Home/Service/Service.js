@@ -10,13 +10,13 @@ const Service = () => {
     const [services, setServices] = value2;
     const [loader, setLoader] = value1;
     return (
-        <>
+        <div className="mt-5 pt-5">
         {
             loader?
             <LoadSpin/>
             :
             <section className="container text-center my-5">
-            <h2>Provide awesome <span style={{ color: '#7AB259' }}>  services</span></h2>
+            <h2>Provide awesome services <span style={{ color: '#7AB259' }}> Click on your desired service to book</span></h2>
             
                     <div className="row mt-5">
                         {
@@ -27,7 +27,7 @@ const Service = () => {
 
         </section>
         }
-        </>
+        </div>
         
     );
 };

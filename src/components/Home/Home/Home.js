@@ -11,6 +11,8 @@ import LoadSpin from "../LoadSpin/LoadSpin";
 import { useEffect } from "react";
 import "./Home.css";
 import UpperBanner from "../UpperBanner/UpperBanner";
+import OurSuccessStory from "../OurSuccessStory/OurSuccesStory";
+import AboutUS from "../AboutUS/AboutUS";
 
 const Home = () => {
   const { value, value1, value2 } = useContext(UserContext);
@@ -20,6 +22,7 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
+      <AboutUS></AboutUS>
       {loader ? (
         <div className="custom-spinner pt-4 mt-4">
           <LoadSpin />
@@ -30,6 +33,7 @@ const Home = () => {
           <Service></Service>
         </div>
       )}
+      <OurSuccessStory></OurSuccessStory>
       <UpperBanner></UpperBanner>
       {loader?(
           <div className="custom-spinner pt-4 mt-4">

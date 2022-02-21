@@ -1,0 +1,106 @@
+.success h4 {
+    color: #FFB800;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.success h2 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.back-image {
+    display: inline;
+    z-index: 1;
+}
+
+.dark-background {
+    background-color: #000000;
+}
+
+.front-image {
+    background-image: url(../../../assets/successonotobg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.success {
+    height: 300px;
+}
+
+.down-part img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.success-avatar {
+    align-content: start;
+    align-self: start;
+    justify-self: start;
+    width: 100%;
+    height: 50px !important;
+    object-fit: contain;
+}
+
+.display-inline {
+    display: inline!important;
+}
+
+.back-part {}
+
+.top-overlay {
+    position: relative;
+    top: -5rem;
+}
+
+.gradient-text {
+    /* Create the gradient. */
+    background-image: linear-gradient(180deg, #3CD52E 0%, #022169 100%);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 136.84%;
+}
+
+.gray-text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 136.84%;
+    /* or 16px */
+    color: #8B8B8B;
+}
+
+.row>* {
+    padding-right: 0!important;
+}
+
+.top-button img {
+    width: 100%;
+    height: 30px;
+    object-fit: contain;
+}
+
+.success-heading {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 136.84%;
+    /* identical to box height, or 22px */
+    color: #000000;
+}
+
+.active {
+    background-size: 158px, 54px;
+    background-color: #F8F8F8;
+}
