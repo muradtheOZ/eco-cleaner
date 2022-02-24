@@ -13,6 +13,7 @@ import "./Home.css";
 import UpperBanner from "../UpperBanner/UpperBanner";
 import OurSuccessStory from "../OurSuccessStory/OurSuccesStory";
 import AboutUS from "../AboutUS/AboutUS";
+import CustomBooking from "../CustomBooking/CustomBooking";
 
 const Home = () => {
   const { value, value1, value2 } = useContext(UserContext);
@@ -34,6 +35,7 @@ const Home = () => {
         </div>
       )}
       <OurSuccessStory></OurSuccessStory>
+      <CustomBooking></CustomBooking>
       <UpperBanner></UpperBanner>
       {loader?(
           <div className="custom-spinner pt-4 mt-4">

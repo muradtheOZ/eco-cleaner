@@ -15,15 +15,6 @@ export function FooterContainer() {
         	<div className="col-md-4 footer-nav animated fadeInUp">
             	<h4>Menu —</h4>
             	<div className="col-md-6">
-                    <ul className="pages">
-                        <li><a href="#">Travel</a></li>
-                        <li><a href="#">Nature</a></li>
-                        <li><a href="#">Explores</a></li>
-                        <li><a href="#">Science</a></li>
-                        <li><a href="#">Advice</a></li>
-                    </ul>
-                </div>
-            	<div className="col-md-6">
                     <ul className="list">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contacts</a></li>
@@ -38,12 +29,11 @@ export function FooterContainer() {
                 	<li><a href="#">Facebook</a></li>
                 	<li><a href="#">Twitter</a></li>
                 	<li><a href="#">Instagram</a></li>
-                	<li><a href="#">RSS</a></li>
                 </ul>
             </div>
         	<div className="col-md-3 footer-ns animated fadeInRight">
             	<h4>Newsletter</h4>
-                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                <p>All thing about eco cleaning</p>
                 <p>
                     <div className="input-group">
                       <input type="text" className="form-control" placeholder="Search for..."/>
