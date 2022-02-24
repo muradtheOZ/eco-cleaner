@@ -2,7 +2,6 @@ import React from 'react';
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import LoadSpin from '../LoadSpin/LoadSpin';
 import './ServiceItem.css'
 
 const ServiceItem = ({ service }) => {
