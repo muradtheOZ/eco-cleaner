@@ -10,7 +10,7 @@ const Service = () => {
     const [services, setServices] = value2;
     const [loader, setLoader] = value1;
     return (
-        <div className="mt-5 pt-5">
+        <div id="services" className="mt-5 pt-5">
         {
             loader?
             <LoadSpin/>

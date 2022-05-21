@@ -24,6 +24,7 @@ const Home = () => {
     <div>
       <Header></Header>
       <AboutUS></AboutUS>
+      <UpperBanner></UpperBanner>
       {loader ? (
         <div className="custom-spinner pt-4 mt-4">
           <LoadSpin />
@@ -36,7 +37,6 @@ const Home = () => {
       )}
       <OurSuccessStory></OurSuccessStory>
       <CustomBooking></CustomBooking>
-      <UpperBanner></UpperBanner>
       {loader?(
           <div className="custom-spinner pt-4 mt-4">
           <LoadSpin />

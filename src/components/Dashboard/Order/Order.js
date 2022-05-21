@@ -70,6 +70,10 @@ const Order = () => {
                                 <input ref={register({ required: true })}  style={{ width: '48%' }} className="form-control" name="price" value={order.price}id="" />
                             </div>
 
+                            <div className="form-group d-flex justify-content-between align-items-center">
+                                <input ref={register({ required: true })}  style={{ width: '48%' }} className="form-control" name="status" value={order.status}id="" />
+                            </div>
+
                             <div className="form-group text-left">
                                 <button type="submit" className="btn main-btn" style={{ textTransform: 'uppercase' }}>Submit Info</button>
                             </div>

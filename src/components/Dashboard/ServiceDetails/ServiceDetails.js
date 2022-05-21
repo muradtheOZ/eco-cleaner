@@ -5,8 +5,10 @@ import './ServiceDetails.css'
 import { UserContext } from '../../../App';
 
 const ServiceDetails = () => {
-    const { value,value1,value2} = useContext(UserContext);
+    const { value,value1,value2,value3} = useContext(UserContext);
   const [loggedInUser, setLoggedInUser] = value;
+  const[order,setOrder] =value3;
+  console.log(value3)
 
     const [details, setDetails] = value2;
     console.log(details)
@@ -49,13 +51,23 @@ const ServiceDetails = () => {
                         <tbody>
                             {
                                 details.map((details) =>
+                                details.status?
                                     <tr>
                                         <td>{details.name}</td>
                                         <td>{details.email}</td>
                                         <td>{details.service}</td>
                                         <td className="text-justify">{details.description}</td>
                                         <td className="text-justify">Stripe</td>
-                                        <td className="text-danger">Pending</td>
+                                        <td className="text-danger">{details.status}</td>
+                                    </tr>
+                                    :
+                                    <tr>
+                                        <td>{details.name}</td>
+                                        <td>{details.email}</td>
+                                        <td>{details.service}</td>
+                                        <td className="text-justify">{details.description}</td>
+                                        <td className="text-justify">Stripe</td>
+                                        <td className="text-success">Unknown</td>
                                     </tr>
                                 )
                             }

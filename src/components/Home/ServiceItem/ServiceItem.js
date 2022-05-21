@@ -16,6 +16,7 @@ const ServiceItem = ({ service }) => {
         setOrder({
             name:service.title,
             price:service.price,
+            status:"pending",
         })
     }
 

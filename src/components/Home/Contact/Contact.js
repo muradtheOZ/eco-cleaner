@@ -1,9 +1,13 @@
 import React from 'react';
 import './Contact.css'
 
+
 const Contact = () => {
+    const sendHandle = () => {
+        alert('Your message has been sent successfully')
+    }
     return (
-        <div className="contact-bg mt-5 pt-4">
+        <div id="contact" className="contact-bg mt-5 pt-4">
             <h2 className="text-center">Want to talk in <span style={{ color: '#7AB259' }}>more details?</span></h2>
             <div className="container contact-content">
             <div className="row pb-4">
@@ -16,7 +20,7 @@ const Contact = () => {
                         <input type="email" name="" className="form-control" placeholder="Your Email Address" id=""/>
                         <input type="text" name="" className="form-control my-4" placeholder="Your Name/Company's Name" id=""/>
                         <textarea id="message" className="form-control mb-4" rows="8" cols="72" placeholder="Your Message"></textarea>
-                        <button className="btn btn-primary main-btn">Send</button>
+                        <button className="btn btn-primary main-btn" onClick={sendHandle}>Send</button>
                     </form>
                 </div>
             </div>

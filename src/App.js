@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import { createContext } from 'react';
@@ -19,6 +20,10 @@ import Service from './components/Home/Service/Service';
 import Header from './components/Home/Header/Header';
 import Navbar from './components/Home/Navbar/Navbar';
 import ServiceOrdered from './components/Dashboard/OrderedService/ServiceOrdered'
+import { NavHashLink } from 'react-router-hash-link';
+import { HashRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import CustomBooking from './components/Home/CustomBooking/CustomBooking';
+import { FooterContainer } from './components/Home/Footer/Footer';
 
 
 export const UserContext = createContext();
@@ -64,10 +69,6 @@ function App() {
         </Route>
         <Route path="/login">
           <Login></Login>
-        </Route>
-        <Route path="/services">
-          <Navbar></Navbar>
-          <Service/>
         </Route>
         <Route path="/servicedetails">
           <ServiceDetails></ServiceDetails>
