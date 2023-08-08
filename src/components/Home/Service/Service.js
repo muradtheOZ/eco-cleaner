@@ -9,6 +9,7 @@ const Service = () => {
     const{value1,value2} = useContext(UserContext);
     const [services, setServices] = value2;
     const [loader, setLoader] = value1;
+    console.log("Hello service",services);
     return (
         <div id="services" className="mt-5 pt-5">
         {
@@ -17,18 +18,18 @@ const Service = () => {
             :
             <section className="container text-center my-5">
             <h2>Provide awesome services <span style={{ color: '#7AB259' }}> Click on your desired service to book</span></h2>
-            
+
                     <div className="row mt-5">
                         {
                             services.map(service => <ServiceItem key={service._id} service={service}></ServiceItem>)
                         }
                     </div>
-            
+
 
         </section>
         }
         </div>
-        
+
     );
 };
 

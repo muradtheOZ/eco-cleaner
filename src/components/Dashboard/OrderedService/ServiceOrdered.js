@@ -8,7 +8,7 @@ const Service = () => {
     const [orders, setOrders] = useState([])
     console.log(orders)
     useEffect(() => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/orders')
+        fetch('https://eco-clean.onrender.com/orders')
         .then(res => res.json())
         .then(result => {
             setOrders(result)
@@ -25,7 +25,7 @@ const Service = () => {
                     {
                         orders.map(order => <OrderedItems order={order}></OrderedItems>)
                     }
-                </div>                
+                </div>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ const DeleteService = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://tranquil-thicket-03462.herokuapp.com/services')
+            const response = await fetch('https://eco-clean.onrender.com/services')
             const data = await response.json()
             setService(data)
         }

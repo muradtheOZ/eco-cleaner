@@ -13,7 +13,7 @@ const ServiceDetails = () => {
     const [details, setDetails] = value2;
     console.log(details)
     useEffect(() => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/ordersSpecific', {
+        fetch('https://eco-clean.onrender.com/ordersSpecific', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(loggedInUser),

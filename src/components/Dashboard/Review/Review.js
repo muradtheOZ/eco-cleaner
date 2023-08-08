@@ -32,7 +32,7 @@ const Review = () => {
         formData.append('designation', info.designation);
         formData.append('description', info.description);
 
-        fetch('https://tranquil-thicket-03462.herokuapp.com/addReview', {
+        fetch('https://eco-clean.onrender.com/addReview', {
             method: 'POST',
             body: formData
         })
@@ -67,7 +67,7 @@ const Review = () => {
                         </div>
                         <div className="form-group">
                             <textarea onBlur={handleBlur} type="text" ref={register({ required: false })} placeholder="Description" className="form-control" name="description" id="" cols="10" rows="3"></textarea>
-                        </div>                                                
+                        </div>
                         <div className="form-group d-flex justify-content-between align-items-center">
                             <input onChange={handleFileChange} ref={register({ required: false })} type="file" style={{ width:'48%'}} className="form-control" name="file" placeholder="Upload project File" id=""/>
                         </div>
@@ -75,7 +75,7 @@ const Review = () => {
                             <button type="submit" className="btn main-btn" style={{textTransform: 'uppercase'}}>Send</button>
                         </div>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
     );

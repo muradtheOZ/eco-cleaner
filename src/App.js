@@ -35,25 +35,25 @@ function App() {
   const[order,setOrder] =useState({});
 
     useEffect( () => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/services')
+        fetch('https://eco-clean.onrender.com/services')
         .then(res => res.json())
         .then(data =>(
             setServices(data),
             console.log("What Data I am getting: ",data),
             setLoader(false)
-        ) 
-            
+        )
+
     )}, [])
 
     // useEffect( () => {
-    //   fetch('https://tranquil-thicket-03462.herokuapp.com/reviews')
+    //   fetch('https://eco-clean.onrender.com/reviews')
     //   .then(res => res.json())
     //   .then(data =>(
     //       setLoader(false),
     //       setReviews(data)
-    //   ) 
-          
-          
+    //   )
+
+
     //   )}, [])
     console.log("What service I am getting: ",services)
 
@@ -94,7 +94,7 @@ function App() {
         <PrivateRoute path="/order/:name">
           <Order></Order>
         </PrivateRoute>
-        
+
       </Switch>
     </Router>
     </UserContext.Provider>

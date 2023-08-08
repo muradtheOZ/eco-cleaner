@@ -37,7 +37,7 @@ const OrderedItems = ({ order }) => {
               console.log(e.value)
               console.log(order)
 
-              fetch(`https://tranquil-thicket-03462.herokuapp.com/orders/${order._id}`, {
+              fetch(`https://eco-clean.onrender.com/orders/${order._id}`, {
                 method: "PUT",
                 headers:{
                     'content-type': 'application/json'

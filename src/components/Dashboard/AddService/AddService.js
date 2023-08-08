@@ -31,7 +31,7 @@ const AddService = () => {
         formData.append('price', info.price);
         formData.append('description', info.description);
 
-        fetch('https://tranquil-thicket-03462.herokuapp.com/addService', {
+        fetch('https://eco-clean.onrender.com/addService', {
             method: 'POST',
             body: formData
         })

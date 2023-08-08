@@ -11,7 +11,7 @@ const MakeAdmin = () => {
   const [loggedInUser, setLoggedInUser] = value;
 
     const onSubmit = data => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/makeAdmin',{
+        fetch('https://eco-clean.onrender.com/makeAdmin',{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

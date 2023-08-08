@@ -1,1 +1,1 @@
-export const serverURL="https://tranquil-thicket-03462.herokuapp.com"
+export const serverURL="https://eco-clean.onrender.com"

@@ -11,14 +11,14 @@ const Review = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect( () => {
-        fetch('https://tranquil-thicket-03462.herokuapp.com/reviews')
+        fetch('https://eco-clean.onrender.com/reviews')
         .then(res => res.json())
         .then(data =>(
             setLoader(false),
             setReviews(data)
-        ) 
-            
-            
+        )
+
+
         )}, [])
 
     return (
@@ -31,7 +31,7 @@ const Review = () => {
                         }
                 </div>
 
-            
+
         </section>
     );
 };

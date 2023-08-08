@@ -29,7 +29,7 @@ const Order = () => {
     const handlePaymentSuccess = paymentId => {
         infoData.created = new Date();
 
-        fetch('https://tranquil-thicket-03462.herokuapp.com/addOrder', {
+        fetch('https://eco-clean.onrender.com/addOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(infoData)
